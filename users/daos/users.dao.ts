@@ -68,7 +68,11 @@ class UsersDao {
       (obj: { email: string }) => obj.email === email,
     );
     let currentUser = this.users[objIndex];
-    return currentUser ? currentUser : null;
+    if (currentUser) {
+      return currentUser;
+    } else {
+      return null;
+    }
   }
 }
 
