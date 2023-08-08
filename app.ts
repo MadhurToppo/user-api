@@ -5,8 +5,8 @@ import expressWinston from "express-winston";
 import cors from "cors";
 import debug from "debug";
 
-import { CommonRoutesConfig } from "./common/common.routes.config";
-import { UsersRoutes } from "./users/users.routes.config";
+import {CommonRoutesConfig} from "./common/common.routes.config";
+import {UsersRoutes} from "./users/users.routes.config";
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
@@ -22,7 +22,7 @@ const loggerOptions: expressWinston.LoggerOptions = {
   format: winston.format.combine(
     winston.format.json(),
     winston.format.prettyPrint(),
-    winston.format.colorize({ all: true }),
+    winston.format.colorize({all: true}),
   ),
 };
 
