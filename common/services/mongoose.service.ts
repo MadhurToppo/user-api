@@ -5,12 +5,7 @@ const log: debug.IDebugger = debug('app:mongoose-service');
 
 class MongooseService {
   private count = 0;
-  private mongooseOptions = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000,
-    useFindAndModify: false,
-  };
+  private mongooseOptions = {};
 
   constructor() {
     this.connectWithRetry();
